@@ -1,0 +1,7 @@
+{
+  "name": "Text Scan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-text color="primary">
+    <ion-textarea value="{{text}}" rows="200"></ion-textarea>
+  </ion-text>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button (click)="copyText()">
+        <ion-icon name="copy-outline"></ion-icon>
+        <ion-label>Copier</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button  >
+        <ion-icon name="document-text-outline" (click)="downloadPdf()"></ion-icon>
+        <ion-label>PDF</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="shar()" >
+        <ion-icon name="share-social-outline"></ion-icon>
+        <ion-label>Partager</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

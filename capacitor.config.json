@@ -1,0 +1,13 @@
+{
+  "appId": "com.textscan.ma",
+  "appName": "Text Scan",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

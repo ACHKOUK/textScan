@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+	<div class="container">
+   <ion-grid >
+     <ion-row >
+       <ion-col size="12">
+         <div class="divspaceimg" *ngIf="image==''">
+          <ion-icon class="iconscanner" ></ion-icon>
+         </div>
+         <div class="divimg" *ngIf="image!=''">
+          <!-- <ion-fab horizontal="end" vertical="top" slot="fixed" edge style="margin-top: 23px;" (click)="recognieImage()">
+            <ion-fab-button >
+              <ion-icon class="iconscanner2" size="large"></ion-icon>
+            </ion-fab-button>
+          </ion-fab> -->
+          <img [src]="image" alt="">
+         </div>
+       </ion-col>
+       <ion-col size="12" *ngIf="image!=''">
+         <ion-row>
+          <ion-col size="12" *ngIf="captureProgress1==0">
+            <ion-button (click)="recognieImage()">SCAN
+            </ion-button>
+           </ion-col>
+           <ion-col size="12" *ngIf="captureProgress1!=0">
+            <progress id="progressbar" max="100" [value]="captureProgress"  buffer="0.5"> </progress>
+           </ion-col>
+
+         </ion-row>
+         
+       </ion-col>
+       
+       <ion-col size="6" (click)="captureImage(1)">
+         <ion-icon class="icongallery" ></ion-icon>
+       </ion-col>
+       <ion-col size="6" (click)="captureImage(2)">
+        <ion-icon class="iconcamera" ></ion-icon>
+       </ion-col>
+     </ion-row> 
+   </ion-grid>
+	</div>
+  
+</ion-content>
