@@ -26,7 +26,6 @@ export class ShowtextComponent implements OnInit {
     this.text=this.OcrService.text;
     this.appVersion.getAppName().then(value => {
       this.AppName = value;
-      alert(this.AppName);
     }).catch(err => {
     });
 

@@ -117,3 +117,10 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+.divlogo{
+  background-image: url('../assets/ocr.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 83% ;
+  height: 246px;
+}

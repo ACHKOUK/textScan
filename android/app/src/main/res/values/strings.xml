@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Text Scan</string>
-    <string name="title_activity_main">Text Scan</string>
+    <string name="app_name">scannertextocr</string>
+    <string name="title_activity_main">scannertextocr</string>
     <string name="package_name">com.textscan.ma</string>
     <string name="custom_url_scheme">com.textscan.ma</string>
-    <string name="admob_app_id">[APP_ID]</string>
 </resources>

@@ -3,8 +3,7 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+          <div class="divlogo"></div>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
@@ -12,13 +11,29 @@
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="SocialShare()" lines="none">
+              <ion-icon slot="start" name="share-social-outline"></ion-icon>
+              <ion-label>Share App</ion-label>
+            </ion-item>
+            <ion-item (click)="rateUs()" lines="none">
+              <ion-icon slot="start" name="star-outline"></ion-icon>
+              <ion-label>Rate Us</ion-label>
+            </ion-item>
+            <ion-item (click)="moreApp()" lines="none">
+              <ion-icon slot="start" name="grid-outline"></ion-icon>
+              <ion-label>More App</ion-label>
+            </ion-item>
+            <ion-item (click)="PrivacyPolicy()" lines="none">
+              <ion-icon slot="start" name="document-lock-outline"></ion-icon>
+              <ion-label>Privacy Policy</ion-label>
+            </ion-item>
+            <ion-item  lines="none" (click)="onexit()">
+              <ion-icon slot="start" name="log-out-outline"></ion-icon>
+              <ion-label>Exit</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
 
-        <ion-list id="labels-list" style="border-top:1px solid gray ;">
-          <ion-item  lines="none" (click)="onexit()">
-            <ion-icon slot="start" name="log-out-outline"></ion-icon>
-            <ion-label>Quitte</ion-label>
-          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
